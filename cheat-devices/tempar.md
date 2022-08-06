@@ -85,7 +85,7 @@ code types inspired by NitroHax for the DS.
             <code>Dx Data Operation</code><br />
             <code>D400000Y XXXXXXXX</code>
         </td>
-        <td>Sets the 'Dx data register' to Data = <code>? XXXXXXXX</code> where ? is determined by Y as follows:<br />0 - add<br />1 - or<br />2 - and<br />3 - xor<br />4 - logical shift left<br />5 - logical shift right<br />6 - rotate right<br />7 - arithmetic shift right<br />8 - multiply</td>
+        <td>Sets the 'Dx data register' to Data = <code>? XXXXXXXX</code> where ? is determined by <code>Y</code> as follows:<br />0 - add<br />1 - or<br />2 - and<br />3 - xor<br />4 - logical shift left<br />5 - logical shift right<br />6 - rotate right<br />7 - arithmetic shift right<br />8 - multiply</td>
     </tr>
     <tr><th colspan="2">Miscellaneous Codes</th></tr>
     <tr>

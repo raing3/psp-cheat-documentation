@@ -250,7 +250,7 @@ December 2009 used a signed binary installed in the UPDATE folder and launched d
             <code>Patch Code</code><br />
             <code>EXXXXXXX YYYYYYYY</code>
         </td>
-        <td>Copies <code>YYYYYYYY</code> bytes from directly after the 0xE code line to <code>[XXXXXXXX+offset]</code>.</td>
+        <td>Copies <code>YYYYYYYY</code> bytes from directly after the <code>0xE</code> code line to <code>[XXXXXXXX+offset]</code>.</td>
     </tr>
     <tr>
         <td>
