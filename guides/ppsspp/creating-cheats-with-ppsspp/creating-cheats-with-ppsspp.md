@@ -21,10 +21,10 @@ This guide assumes the following knowledge:
 
 ## Steps
 
-#### 1. Launch the game
+### 1. Launch the game
 1. Launch PPSSPP and open the game you want to make cheats for.
 
-#### 2. Attaching Cheat Engine to PPSSPP
+### 2. Attaching Cheat Engine to PPSSPP
 1. Launch Cheat Engine.
 2. Click the open process button.
 3. Select the PPSSPP process from the list.
@@ -35,7 +35,7 @@ This guide assumes the following knowledge:
 
 ![MEM_MAPPED Setting](assets/cheat-engine-memmapped.png)
 
-#### 3. Determining the PSP user memory offset
+### 3. Determining the PSP user memory offset
 1. Open the PPSSPP Memory Viewer (Debug > Memory Viewer).
 2. Navigate to the start of user memory by double clicking on the "0x08800000 (User Memory)".
 3. Set the first 4 bytes of the user memory to something you can easily search for in PPSSPP.
@@ -48,7 +48,7 @@ This guide assumes the following knowledge:
 
 In the above example the user memory starts at 0x01540000 in the process memory.
 
-#### 4. Use Cheat Engine to find the address of the variable you want to modify
+### 4. Use Cheat Engine to find the address of the variable you want to modify
 1. Set the memory scan start address to the address where the user memory starts.
 2. Use the search options in Cheat Engine to find a list of potential addresses. Try to reduce the search results to as small a number as possible.
 3. Determine the address in user memory where the value is located by subtracting the offset where user memory starts in the PC process and then adding 0x08800000.
@@ -61,7 +61,7 @@ In the above example the search results have been filtered to 2 possible address
  * 0x08B4A8D0 (= 0x1574A8D0 - 0x15400000 + 0x08800000) ** this address is the source of truth in this case.
  * 0x0960237C (= 0x1620237C - 0x15400000 + 0x08800000)
 
-#### 5. Use the disassembly tool to determine what code changes the value.
+### 5. Use the disassembly tool to determine what code changes the value.
 
 Because the offsets of data addresses may not be consistent across emulator versions and physical hardware it makes our job a little harder.
 
@@ -88,7 +88,7 @@ In the example above a write breakpoint has been set and the instruction at 0x08
 
 The following step will be looking at rewriting the logic which sets this value.
 
-#### 6. Re-writing the games logic
+### 6. Re-writing the games logic
 
 This is where things get quite tedious. The memory editor of PPSSPP is very restrictive and doesn't offer a method of converting a MIPS instruction to its hexadecimal representation. Fortunately ps2dis can be used to work around this limitation but adds additional steps to the process.
 
@@ -103,20 +103,20 @@ This is where things get quite tedious. The memory editor of PPSSPP is very rest
 
 The above example shows that the instruction "addiu s3, zero, $0064" translates to a value of 0x24130064. This value will be injected into the game in the next step to influence the final value of the a0 register. Rather than incrementing by 1 each time the breakpoint is hit the register will instead be increased by 100 (0x64).
 
-#### 7. Injecting your new logic
+### 7. Injecting your new logic
 
 Again, because the memory editing capabilities of PPSSPP are quite limited this step can also be quite tedious.
 
 1. Navigate to the address you want to edit in either the disassembler or memory viewer. If in the disassembler you can quickly navigate to an address displayed in the disassembler by right clicking on it and selecting "Go to in Memory View".
-2. Insert your updated logic into the appropriate addresses in the memory editor. Ensure you enter the bytes of each instruction in reverse order
+2. Insert your updated logic into the appropriate addresses in the memory editor. Ensure you enter the bytes of each instruction in reverse order.
 
 ![PPSSPP Rewriting the Game Logic](assets/ppsspp-rewriting-the-game-logic.png)
 
-#### 7. Test your changes
+### 7. Test your changes
 
 Almost done. Resume the game and test the changes work as expected. If the changes work as expected all that is needed is to convert them to CWCheat format so they can be used by everyone.
 
-#### 8. Convert the cheat to CWCheat format
+### 8. Convert the cheat to CWCheat format
 
 This step is much simpler, in our case all of the instructions we change will follow the following format:
 

@@ -6,7 +6,7 @@ The emulator has a fully functional debugger and is compatible with CWCheat form
 
 ## Guides
 
- * [Creating Cheats with PPSSPP](../creating-cheats-with-ppsspp/creating-cheats-with-ppsspp.md)
+ * [Creating Cheats with PPSSPP](creating-cheats-with-ppsspp/creating-cheats-with-ppsspp.md)
 
 ## Useful Links
 
