@@ -115,3 +115,30 @@ code types inspired by NitroHax for the DS.
         <td>Checks if <code>YYYY</code> == (not <code>ZZZZ</code> < cheat apply count).<br />If not, the code(s) following this one are not executed (ie. execution status is set to false) until a code type <code>D0</code> or <code>D2</code> is encountered, or until the end of the code list is reached.</td>
     </tr>
 </table>
+
+### Fake addresses
+
+Fake address are used to return system information which either can't be accessed from memory or does not have a
+static address. These are intended to simplify the process of cheat creation / conversion from other cheat devices.
+
+Presently these addresses can only be accessed using the exact address listed
+(ie. no 8/16-bit retrieval of the upper return bits).
+
+<table>
+    <tr>
+        <th>Address</th>
+        <th>Return Value</th>
+    </tr>
+    <tr>
+        <td>0x0A000000</td>
+        <td>Pressed buttons. See <a href="../other/button-activators.md">button activators</a> for possible values.</td>
+    </tr>
+    <tr>
+        <td>0x0A000004</td>
+        <td>X-axis of analog nub.</td>
+    </tr>
+    <tr>
+        <td>0x0A000008</td>
+        <td>Y-axis of analog nub.</td>
+    </tr>
+</table>
