@@ -7,6 +7,10 @@
  * [NitePR](cheat-devices/nitepr.md)
  * [PSP Action Replay (PSPAR)](cheat-devices/pspar.md)
  * [TempAR](cheat-devices/tempar.md)
+ 
+### Other
+
+ * [Button activators](other/button-activators.md) 
 
 ### Guides
 
