@@ -320,7 +320,7 @@ this cheat device also supports native PS1 Action Replay codes and homebrew soft
             <code>Button Press</code><br />
             <code>D00000YY 1XXXXXXX</code>
         </td>
-        <td>Checks if <code>ctrl & XXXXXXX</code> == <code>XXXXXXX</code>.<br />If not, the next <code>YY+1</code> lines are not executed (ie. execution status is set to false for <code>YY+1</code> lines).</td>
+        <td>Checks if <code>ctrl & XXXXXXX</code> == <code>XXXXXXX</code>.<br />If not, the next <code>YY+1</code> lines are not executed (ie. execution status is set to false for <code>YY+1</code> lines). See <a href="../other/button-activators.md">button activators</a> for possible values.</td>
     </tr>
     <tr>
         <td>
@@ -328,7 +328,7 @@ this cheat device also supports native PS1 Action Replay codes and homebrew soft
             <code>Inverse Button Press</code><br />
             <code>D00000YY 3XXXXXXX</code>
         </td>
-        <td>Checks if <code>ctrl & XXXXXXX</code> != <code>XXXXXXX</code>.<br />If not, the next <code>YY+1</code> lines are not executed (ie. execution status is set to false for <code>YY+1</code> lines).</td>
+        <td>Checks if <code>ctrl & XXXXXXX</code> != <code>XXXXXXX</code>.<br />If not, the next <code>YY+1</code> lines are not executed (ie. execution status is set to false for <code>YY+1</code> lines). See <a href="../other/button-activators.md">button activators</a> for possible values.</td>
     </tr>
     <tr>
         <td>
